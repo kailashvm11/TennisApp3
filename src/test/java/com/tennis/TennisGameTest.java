@@ -241,6 +241,14 @@ public class TennisGameTest {
         assertEquals( "DEUCE", score );
     }
 
+    @Test
+    public void shouldBeWinForPlayerA() {
+        String[] pointWinners = {"A", "A", "A", "B", "A", "B", "B", "B"};
+        playManyPoints(pointWinners);
+        String score = game.getScore();
+        assertEquals( "GAME PLAYER A", score );
+    }
+
     private void playManyPoints(String[] pointWinners) {
         for (String pointWinner : pointWinners) {
             game.nextPointWon(pointWinner);
