@@ -73,7 +73,13 @@ public class TennisGameTest {
         assertEquals( "LOVE THIRTY", score );
     }
 
-
+    @Test
+    public void shouldReturnScoreLoveForty() {
+        String[] pointWinners = {"B", "B", "B"};
+        playManyPoints(pointWinners);
+        String score = game.getScore();
+        assertEquals( "LOVE FORTY", score );
+    }
 
     private void playManyPoints(String[] pointWinners) {
         for (String pointWinner : pointWinners) {
