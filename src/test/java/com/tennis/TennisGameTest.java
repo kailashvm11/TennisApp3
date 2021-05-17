@@ -55,7 +55,7 @@ public class TennisGameTest {
         String[] pointWinners = {"A", "A", "A", "A"};
         playManyPoints(pointWinners);
         String score = game.getScore();
-        assertEquals( "GAME LOVE", score );
+        assertEquals( "GAME PLAYER A", score );
     }
 
     @Test
@@ -79,6 +79,14 @@ public class TennisGameTest {
         playManyPoints(pointWinners);
         String score = game.getScore();
         assertEquals( "LOVE FORTY", score );
+    }
+
+    @Test
+    public void shouldReturnScoreGamePlayerB() {
+        String[] pointWinners = {"B", "B", "B", "B"};
+        playManyPoints(pointWinners);
+        String score = game.getScore();
+        assertEquals( "GAME PLAYER B", score );
     }
 
     private void playManyPoints(String[] pointWinners) {

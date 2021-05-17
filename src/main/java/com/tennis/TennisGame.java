@@ -15,10 +15,11 @@ public class TennisGame {
         scoreMap.put(new Scoreboard(1, 0), "FIFTEEN LOVE");
         scoreMap.put(new Scoreboard(2, 0), "THIRTY LOVE");
         scoreMap.put(new Scoreboard(3, 0), "FORTY LOVE");
-        scoreMap.put(new Scoreboard(4, 0), "GAME LOVE");
+        scoreMap.put(new Scoreboard(4, 0), "GAME PLAYER A");
         scoreMap.put(new Scoreboard(0, 1), "LOVE FIFTEEN");
         scoreMap.put(new Scoreboard(0, 2), "LOVE THIRTY");
         scoreMap.put(new Scoreboard(0, 3), "LOVE FORTY");
+        scoreMap.put(new Scoreboard(0, 4), "GAME PLAYER B");
     }
 
     public static void main( String[] args ) {
