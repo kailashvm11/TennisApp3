@@ -65,6 +65,16 @@ public class TennisGameTest {
         assertEquals( "LOVE FIFTEEN", score );
     }
 
+    @Test
+    public void shouldReturnScoreLoveThirty() {
+        game.nextPointWon("B");
+        game.nextPointWon("B");
+        String score = game.getScore();
+        assertEquals( "LOVE THIRTY", score );
+    }
+
+
+
     private void playManyPoints(String[] pointWinners) {
         for (String pointWinner : pointWinners) {
             game.nextPointWon(pointWinner);
