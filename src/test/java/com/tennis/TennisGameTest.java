@@ -27,4 +27,11 @@ public class TennisGameTest {
         assertEquals( "LOVE ALL", score );
     }
 
+    @Test
+    public void shouldReturnScoreFifteenLove() {
+        game.nextPointWon("A");
+        String score = game.getScore();
+        assertEquals( "FIFTEEN LOVE", score );
+    }
+
 }
