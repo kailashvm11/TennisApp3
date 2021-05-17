@@ -20,6 +20,8 @@ public class TennisGame {
         scoreMap.put(new Scoreboard(0, 2), "LOVE THIRTY");
         scoreMap.put(new Scoreboard(0, 3), "LOVE FORTY");
         scoreMap.put(new Scoreboard(0, 4), "GAME PLAYER B");
+        scoreMap.put(new Scoreboard(3, 3), "DEUCE");
+
     }
 
     public static void main( String[] args ) {
