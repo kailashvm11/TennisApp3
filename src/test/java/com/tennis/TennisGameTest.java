@@ -225,6 +225,22 @@ public class TennisGameTest {
         assertEquals( "GAME PLAYER B", score );
     }
 
+    @Test
+    public void shouldBeDeuceforPlayerAAfterAdvantageLoss() {
+        String[] pointWinners = {"A", "B", "B", "A", "A", "B", "A", "B"};
+        playManyPoints(pointWinners);
+        String score = game.getScore();
+        assertEquals( "DEUCE", score );
+    }
+
+    @Test
+    public void shouldBeDeuceforPlayerBAfterAdvantageLoss() {
+        String[] pointWinners = {"A", "B", "B", "A", "A", "B", "B", "A"};
+        playManyPoints(pointWinners);
+        String score = game.getScore();
+        assertEquals( "DEUCE", score );
+    }
+
     private void playManyPoints(String[] pointWinners) {
         for (String pointWinner : pointWinners) {
             game.nextPointWon(pointWinner);

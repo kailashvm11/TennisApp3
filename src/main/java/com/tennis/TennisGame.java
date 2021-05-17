@@ -51,6 +51,33 @@ public class TennisGame {
     }
 
     public void nextPointWon(String player) {
+        if (isOpposingPlayerOnAdvantage(player)) {
+            decrementOpposingPlayerScore(player);
+        } else {
+            incrementPlayerScore(player);
+        }
+    }
+
+    private boolean isOpposingPlayerOnAdvantage(String player) {
+        if (player.equals("A") && scoreMap.get(scoreboard).equals("FORTY ADVANTAGE")) {
+            return true;
+        }
+        if (player.equals("B") && scoreMap.get(scoreboard).equals("ADVANTAGE FORTY")) {
+            return true;
+        }
+        return false;
+    }
+
+    private void decrementOpposingPlayerScore(String player) {
+        if (player.equals("A")) {
+            scoreboard.decrementPlayerBScore();
+        }
+        if (player.equals("B")) {
+            scoreboard.decrementPlayerAScore();
+        }
+    }
+
+    private void incrementPlayerScore(String player) {
         if (player.equals("A")) {
             scoreboard.incrementPlayerAScore();
         }

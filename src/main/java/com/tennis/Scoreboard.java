@@ -33,6 +33,13 @@ public class Scoreboard {
         playerBScore++;
     }
 
+    public void decrementPlayerAScore() {
+        playerAScore--;
+    }
+    public void decrementPlayerBScore() {
+        playerBScore--;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -54,4 +61,6 @@ public class Scoreboard {
                 ", Player B Score=" + playerBScore +
                 '}';
     }
+
+
 }
