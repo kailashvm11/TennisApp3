@@ -13,6 +13,7 @@ public class TennisGame {
         scoreMap.put(1, "FIFTEEN LOVE");
         scoreMap.put(2, "THIRTY LOVE");
         scoreMap.put(3, "FORTY LOVE");
+        scoreMap.put(4, "GAME LOVE");
     }
 
     private Integer playerScore = 0;
