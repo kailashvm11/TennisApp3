@@ -38,6 +38,8 @@ public class TennisGame {
         scoreMap.put(new Scoreboard(2, 4), GAME_PLAYER_B);
         scoreMap.put(new Scoreboard(4, 3), "ADVANTAGE FORTY");
         scoreMap.put(new Scoreboard(3, 4), "FORTY ADVANTAGE");
+        scoreMap.put(new Scoreboard(5, 3), GAME_PLAYER_A);
+        scoreMap.put(new Scoreboard(3, 5), GAME_PLAYER_B);
 
     }
 
