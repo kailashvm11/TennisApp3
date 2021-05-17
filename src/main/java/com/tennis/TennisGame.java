@@ -5,27 +5,33 @@ import java.util.Map;
 
 public class TennisGame {
 
-    private final Map<Integer,String> scoreMap;
+    private Scoreboard scoreboard;
+    private final Map<Scoreboard, String > scoreMap;
 
     public TennisGame() {
+        scoreboard = new Scoreboard();
         scoreMap = new HashMap<>();
-        scoreMap.put(0, "LOVE ALL");
-        scoreMap.put(1, "FIFTEEN LOVE");
-        scoreMap.put(2, "THIRTY LOVE");
-        scoreMap.put(3, "FORTY LOVE");
-        scoreMap.put(4, "GAME LOVE");
+        scoreMap.put(new Scoreboard(0, 0), "LOVE ALL");
+        scoreMap.put(new Scoreboard(1, 0), "FIFTEEN LOVE");
+        scoreMap.put(new Scoreboard(2, 0), "THIRTY LOVE");
+        scoreMap.put(new Scoreboard(3, 0), "FORTY LOVE");
+        scoreMap.put(new Scoreboard(4, 0), "GAME LOVE");
+        scoreMap.put(new Scoreboard(0, 1), "LOVE FIFTEEN");
     }
-
-    private Integer playerScore = 0;
 
     public static void main( String[] args ) {
     }
 
     String getScore() {
-        return scoreMap.get(playerScore);
+        return scoreMap.get(scoreboard);
     }
 
     public void nextPointWon(String player) {
-        playerScore++;
+        if (player.equals("A")) {
+            scoreboard.incrementPlayerAScore();
+        }
+        if (player.equals("B")) {
+            scoreboard.incrementPlayerBScore();
+        }
     }
 }
