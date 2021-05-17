@@ -7,6 +7,9 @@ public class TennisGame {
 
     private Scoreboard scoreboard;
     private final Map<Scoreboard, String > scoreMap;
+    private static final String GAME_PLAYER_A = "GAME PLAYER A";
+    private static final String GAME_PLAYER_B = "GAME PLAYER B";
+
 
     public TennisGame() {
         scoreboard = new Scoreboard();
@@ -15,11 +18,11 @@ public class TennisGame {
         scoreMap.put(new Scoreboard(1, 0), "FIFTEEN LOVE");
         scoreMap.put(new Scoreboard(2, 0), "THIRTY LOVE");
         scoreMap.put(new Scoreboard(3, 0), "FORTY LOVE");
-        scoreMap.put(new Scoreboard(4, 0), "GAME PLAYER A");
+        scoreMap.put(new Scoreboard(4, 0), GAME_PLAYER_A);
         scoreMap.put(new Scoreboard(0, 1), "LOVE FIFTEEN");
         scoreMap.put(new Scoreboard(0, 2), "LOVE THIRTY");
         scoreMap.put(new Scoreboard(0, 3), "LOVE FORTY");
-        scoreMap.put(new Scoreboard(0, 4), "GAME PLAYER B");
+        scoreMap.put(new Scoreboard(0, 4), GAME_PLAYER_B);
         scoreMap.put(new Scoreboard(3, 3), "DEUCE");
         scoreMap.put(new Scoreboard(1, 1), "FIFTEEN ALL");
         scoreMap.put(new Scoreboard(1, 2), "FIFTEEN THIRTY");
@@ -29,10 +32,10 @@ public class TennisGame {
         scoreMap.put(new Scoreboard(2, 3), "THIRTY FORTY");
         scoreMap.put(new Scoreboard(3, 1), "FORTY FIFTEEN");
         scoreMap.put(new Scoreboard(3, 2), "FORTY THIRTY");
-        scoreMap.put(new Scoreboard(4, 1), "GAME PLAYER A");
-        scoreMap.put(new Scoreboard(4, 2), "GAME PLAYER A");
-        scoreMap.put(new Scoreboard(1, 4), "GAME PLAYER B");
-        scoreMap.put(new Scoreboard(2, 4), "GAME PLAYER B");
+        scoreMap.put(new Scoreboard(4, 1), GAME_PLAYER_A);
+        scoreMap.put(new Scoreboard(4, 2), GAME_PLAYER_A);
+        scoreMap.put(new Scoreboard(1, 4), GAME_PLAYER_B);
+        scoreMap.put(new Scoreboard(2, 4), GAME_PLAYER_B);
 
 
     }
