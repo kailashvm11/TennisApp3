@@ -1,25 +1,27 @@
 package com.tennis;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TennisGame {
 
-    private static final String INITIAL_SCORE = "LOVE ALL";
-    private static final String FIRST_SCORE = "FIFTEEN LOVE";
-    private static final String SECOND_SCORE = "THIRTY LOVE";
+    private final Map<Integer,String> scoreMap;
 
-    private int playerScore = 0;
+    public TennisGame() {
+        scoreMap = new HashMap<>();
+        scoreMap.put(0, "LOVE ALL");
+        scoreMap.put(1, "FIFTEEN LOVE");
+        scoreMap.put(2, "THIRTY LOVE");
+        scoreMap.put(3, "FORTY LOVE");
+    }
+
+    private Integer playerScore = 0;
 
     public static void main( String[] args ) {
     }
 
     String getScore() {
-        if (playerScore == 0) {
-            return INITIAL_SCORE;
-        }
-        if (playerScore == 1) {
-            return FIRST_SCORE;
-        } else {
-            return SECOND_SCORE;
-        }
+        return scoreMap.get(playerScore);
     }
 
     public void nextPointWon(String player) {

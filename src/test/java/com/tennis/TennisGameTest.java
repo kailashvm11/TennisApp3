@@ -42,4 +42,19 @@ public class TennisGameTest {
         assertEquals( "THIRTY LOVE", score );
     }
 
+    @Test
+    public void shouldReturnScoreFortyLove() {
+        String[] pointWinners = {"A", "A", "A"};
+        playManyPoints(pointWinners);
+        String score = game.getScore();
+        assertEquals( "FORTY LOVE", score );
+    }
+
+    private void playManyPoints(String[] pointWinners) {
+        for (String pointWinner : pointWinners) {
+            game.nextPointWon(pointWinner);
+        }
+    }
+
+
 }
